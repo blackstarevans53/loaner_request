@@ -7,14 +7,14 @@
         <client_scripts_access>false</client_scripts_access>
         <configuration_access>false</configuration_access>
         <create_access>false</create_access>
-        <create_access_controls>false</create_access_controls>
+        <create_access_controls>true</create_access_controls>
         <delete_access>false</delete_access>
         <extension_model/>
         <is_extendable>false</is_extendable>
-        <label>Loaner Request</label>
+        <label>Loaner Task</label>
         <live_feed_enabled>false</live_feed_enabled>
-        <name>x_cdltd_loaner_req_loaner_request</name>
-        <number_ref display_value="LNR">03b32c27009a20107f44f9394ed9b7bc</number_ref>
+        <name>x_cdltd_loaner_req_loaner_task</name>
+        <number_ref/>
         <provider_class/>
         <read_access>true</read_access>
         <scriptable_table>false</scriptable_table>
@@ -23,18 +23,18 @@
         <sys_class_name>sys_db_object</sys_class_name>
         <sys_class_path/>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-02-18 23:16:54</sys_created_on>
-        <sys_id>c3b32c27009a20107f44f9394ed9b74c</sys_id>
-        <sys_mod_count>6</sys_mod_count>
-        <sys_name>Loaner Request</sys_name>
+        <sys_created_on>2021-02-21 02:52:44</sys_created_on>
+        <sys_id>a5e7eb480022a0107f44f9394ed9b799</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Loaner Task</sys_name>
         <sys_package display_value="Loaner Request" source="x_cdltd_loaner_req">2ce2e027009a20107f44f9394ed9b730</sys_package>
         <sys_policy/>
         <sys_scope display_value="Loaner Request">2ce2e027009a20107f44f9394ed9b730</sys_scope>
-        <sys_update_name>sys_db_object_c3b32c27009a20107f44f9394ed9b74c</sys_update_name>
+        <sys_update_name>sys_db_object_a5e7eb480022a0107f44f9394ed9b799</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-02-20 18:43:15</sys_updated_on>
+        <sys_updated_on>2021-02-21 02:52:44</sys_updated_on>
         <update_access>false</update_access>
-        <user_role/>
+        <user_role display_value="x_cdltd_loaner_req.loaner_request_user" name="x_cdltd_loaner_req.loaner_request_user">2c13a027009a20107f44f9394ed9b7f0</user_role>
         <ws_access>true</ws_access>
     </sys_db_object>
 </record_update>
