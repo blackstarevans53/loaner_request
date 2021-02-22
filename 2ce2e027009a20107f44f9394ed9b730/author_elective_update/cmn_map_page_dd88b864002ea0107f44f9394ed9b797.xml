@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="cmn_map_page">
+    <cmn_map_page action="DELETE">
+        <center_address>Yogododji, Africa</center_address>
+        <center_latitude/>
+        <center_longitude/>
+        <controls_size>large</controls_size>
+        <disable_map_controls/>
+        <disable_nav_bar>false</disable_nav_bar>
+        <filter/>
+        <initial_zoom>2</initial_zoom>
+        <name>x_cdltd_loaner_req_Requested for Locatio</name>
+        <overview>false</overview>
+        <refresh_on_zoom>false</refresh_on_zoom>
+        <roles/>
+        <script><![CDATA[var gr = new GlideRecord('x_cdltd_loaner_req_loaner_request');
+gr.addEncodedQuery("active=true^requested_for.cityISNOTEMPTY");
+gr.query();
+
+while(gr.next()){
+	
+	//  Add copied  REST Message Script BELOW this line
+	
+	
+	
+	//  Add copied REST Message script ABOVE this line
+	
+	
+	// Extract latitude and longitude values from REST Message response
+	var xmlDoc = new XMLDocument2();
+	xmlDoc.parseXML(responseBody);
+	var myLat= xmlDoc.getNodeText("//latitude");
+	var myLong= xmlDoc.getNodeText("//longitude");
+	
+	// Plot each Requested for's location on a google map
+	var item = map.addItem(gr);
+	item.latitude = String(myLat);
+	item.longitude = String(myLong);
+	item.dialog_title = gr.getDisplayValue();
+	item.icon = "https://maps.google.com/mapfiles/ms/micons/yellow.png";
+	item.icon_width = "32";
+	item.icon_height = "32";
+}
+
+]]></script>
+        <show_device_location>true</show_device_location>
+        <suffix>Requested for Locations</suffix>
+        <sys_class_name>cmn_map_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-22 03:22:29</sys_created_on>
+        <sys_id>dd88b864002ea0107f44f9394ed9b797</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_cdltd_loaner_req_Requested for Locatio</sys_name>
+        <sys_package display_value="Loaner Request" source="x_cdltd_loaner_req">2ce2e027009a20107f44f9394ed9b730</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Request">2ce2e027009a20107f44f9394ed9b730</sys_scope>
+        <sys_update_name>cmn_map_page_dd88b864002ea0107f44f9394ed9b797</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-22 03:22:29</sys_updated_on>
+        <type>terrain</type>
+        <type_selection>buttons</type_selection>
+        <use_advanced_configuration>false</use_advanced_configuration>
+    </cmn_map_page>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Loaner Request">2ce2e027009a20107f44f9394ed9b730</application>
+        <file_path/>
+        <instance_id>d94604571b1a649064e9beef034bcb5a</instance_id>
+        <instance_name>adf-feb17chw-dev-001</instance_name>
+        <name>cmn_map_page_dd88b864002ea0107f44f9394ed9b797</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="cmn_map_page"&gt;&lt;cmn_map_page action="INSERT_OR_UPDATE"&gt;&lt;center_address&gt;Yogododji, Africa&lt;/center_address&gt;&lt;center_latitude/&gt;&lt;center_longitude/&gt;&lt;controls_size&gt;large&lt;/controls_size&gt;&lt;disable_map_controls/&gt;&lt;disable_nav_bar&gt;false&lt;/disable_nav_bar&gt;&lt;filter/&gt;&lt;initial_zoom&gt;2&lt;/initial_zoom&gt;&lt;name&gt;x_cdltd_loaner_req_Requested for Locatio&lt;/name&gt;&lt;overview&gt;false&lt;/overview&gt;&lt;refresh_on_zoom&gt;false&lt;/refresh_on_zoom&gt;&lt;roles/&gt;&lt;script&gt;&lt;![CDATA[var gr = new GlideRecord('x_cdltd_loaner_req_loaner_request');
+gr.addEncodedQuery("active=true^requested_for.cityISNOTEMPTY");
+gr.query();
+
+while(gr.next()){
+	
+	//  Add copied  REST Message Script BELOW this line
+	
+	
+	
+	//  Add copied REST Message script ABOVE this line
+	
+	
+	// Extract latitude and longitude values from REST Message response
+	var xmlDoc = new XMLDocument2();
+	xmlDoc.parseXML(responseBody);
+	var myLat= xmlDoc.getNodeText("//latitude");
+	var myLong= xmlDoc.getNodeText("//longitude");
+	
+	// Plot each Requested for's location on a google map
+	var item = map.addItem(gr);
+	item.latitude = String(myLat);
+	item.longitude = String(myLong);
+	item.dialog_title = gr.getDisplayValue();
+	item.icon = "https://maps.google.com/mapfiles/ms/micons/yellow.png";
+	item.icon_width = "32";
+	item.icon_height = "32";
+}
+
+]]&gt;&lt;/script&gt;&lt;show_device_location&gt;true&lt;/show_device_location&gt;&lt;suffix&gt;Requested for Locations&lt;/suffix&gt;&lt;sys_class_name&gt;cmn_map_page&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-02-22 03:22:29&lt;/sys_created_on&gt;&lt;sys_id&gt;dd88b864002ea0107f44f9394ed9b797&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;x_cdltd_loaner_req_Requested for Locatio&lt;/sys_name&gt;&lt;sys_package display_value="Loaner Request" source="x_cdltd_loaner_req"&gt;2ce2e027009a20107f44f9394ed9b730&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Loaner Request"&gt;2ce2e027009a20107f44f9394ed9b730&lt;/sys_scope&gt;&lt;sys_update_name&gt;cmn_map_page_dd88b864002ea0107f44f9394ed9b797&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-02-22 03:22:29&lt;/sys_updated_on&gt;&lt;type&gt;terrain&lt;/type&gt;&lt;type_selection&gt;buttons&lt;/type_selection&gt;&lt;use_advanced_configuration&gt;false&lt;/use_advanced_configuration&gt;&lt;/cmn_map_page&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-766698606</payload_hash>
+        <record_name>x_cdltd_loaner_req_Requested for Locatio</record_name>
+        <reverted_from/>
+        <source>144731c8006e60107f44f9394ed9b748</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-22 03:22:30</sys_created_on>
+        <sys_id>7db8b864002ea0107f44f9394ed9b7a4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>177c7c2851b0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-22 03:22:30</sys_updated_on>
+        <type>Map Page</type>
+        <update_guid>b5b8b864ed2ea0108fd4f009fbf36ca4</update_guid>
+        <update_guid_history>b5b8b864ed2ea0108fd4f009fbf36ca4:-766698606</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="x_cdltd_loaner_req_Requested for Locatio">f56ab8a4002ea0107f44f9394ed9b7b9</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-22 03:29:51</sys_created_on>
+        <sys_db_object display_value="" name="cmn_map_page">cmn_map_page</sys_db_object>
+        <sys_id>d337d34f17c244b286cd63d3f26b2844</sys_id>
+        <sys_metadata>dd88b864002ea0107f44f9394ed9b797</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_cdltd_loaner_req_Requested for Locatio</sys_name>
+        <sys_package display_value="Loaner Request" source="x_cdltd_loaner_req">2ce2e027009a20107f44f9394ed9b730</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Request">2ce2e027009a20107f44f9394ed9b730</sys_scope>
+        <sys_scope_delete display_value="">35c84a840bae4c3bb66179e7af87d991</sys_scope_delete>
+        <sys_update_name>cmn_map_page_dd88b864002ea0107f44f9394ed9b797</sys_update_name>
+        <sys_update_version display_value="cmn_map_page_dd88b864002ea0107f44f9394ed9b797">7db8b864002ea0107f44f9394ed9b7a4</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-22 03:29:51</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
